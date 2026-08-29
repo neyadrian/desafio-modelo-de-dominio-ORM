@@ -13,7 +13,7 @@ public class Participante {
     private String nome;
     private String email;
 
-    public Participante(Integer id, String nome, String email) {
+    public Participante() {
 
     }
 
