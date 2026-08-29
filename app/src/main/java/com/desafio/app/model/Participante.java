@@ -3,27 +3,31 @@ package com.desafio.app.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "tb_usuario")
-public class Usuario {
+@Table(name = "tb_participante")
+public class Participante {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     private String nome;
     private String email;
 
-    public Usuario(Long id, String nome, String email) {
+    public Participante(Integer id, String nome, String email) {
+
+    }
+
+    public Participante(Integer id, String nome, String email) {
         this.id = id;
         this.nome = nome;
         this.email = email;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
