@@ -2,6 +2,9 @@ package com.desafio.app.model;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name = "tb_categoria")
 public class Categoria {
@@ -11,6 +14,9 @@ public class Categoria {
     private Integer id;
 
     private String descricao;
+
+    @OneToMany(mappedBy = "categoria");
+    private List<Atividade> ativiidades = new ArrayList<>();
 
     public Categoria() {
 
@@ -35,5 +41,9 @@ public class Categoria {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public List<Atividade> getAtiviidades() {
+        return ativiidades;
     }
 }
