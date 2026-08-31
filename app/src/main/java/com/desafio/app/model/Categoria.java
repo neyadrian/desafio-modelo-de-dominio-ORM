@@ -16,7 +16,7 @@ public class Categoria {
     private String descricao;
 
     @OneToMany(mappedBy = "categoria")
-    private List<Atividade> ativiidades = new ArrayList<>();
+    private List<Atividade> atividades = new ArrayList<>();
 
     public Categoria() {
 
@@ -44,6 +44,6 @@ public class Categoria {
     }
 
     public List<Atividade> getAtiviidades() {
-        return ativiidades;
+        return atividades;
     }
 }
