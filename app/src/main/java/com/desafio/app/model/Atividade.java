@@ -24,6 +24,9 @@ public class Atividade {
     @OneToMany(mappedBy = "atividade")
     private List<Bloco> blocos = new ArrayList<>();
 
+    @ManyToMany(mappedBy = "atividades")
+    private List<Participante> participantes = new ArrayList<>();
+
     public Atividade() {
 
     }
@@ -77,5 +80,9 @@ public class Atividade {
 
     public List<Bloco> getBlocos() {
         return blocos;
+    }
+
+    public List<Participante> getParticipantes() {
+        return participantes;
     }
 }
